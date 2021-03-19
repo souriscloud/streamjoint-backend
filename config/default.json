@@ -1,7 +1,7 @@
 {
-  "host": "localhost",
-  "port": 3030,
-  "public": "../public/",
+  "host": "FEATHERS_HOST",
+  "port": "FEATHERS_PORT",
+  "public": "FEATHERS_PUBLIC",
   "paginate": {
     "default": 10,
     "max": 50
@@ -9,7 +9,7 @@
   "authentication": {
     "entity": "user",
     "service": "users",
-    "secret": "W3yJlQIrShO60PQG+Le5Rc39XJk=",
+    "secret": "AUTH_SECRET",
     "authStrategies": [
       "jwt",
       "local"
