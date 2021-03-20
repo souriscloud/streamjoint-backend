@@ -18,7 +18,7 @@
       "header": {
         "typ": "access"
       },
-      "audience": "https://yourdomain.com",
+      "audience": "JWT_AUDIENCE",
       "issuer": "feathers",
       "algorithm": "HS256",
       "expiresIn": "1d"
@@ -26,6 +26,16 @@
     "local": {
       "usernameField": "email",
       "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/twitch-ok.html",
+      "twitch": {
+        "client_id": "OAUTH_TWITCH_KEY",
+        "client_secret": "OAUTH_TWITCH_SECRET",
+        "scope": [
+          "channel:read:editors", "channel:read:hype_train", "channel:read:redemptions", "channel:read:subscriptions",
+          "moderation:read", "channel:moderate", "chat:edit", "chat:read", "whispers:read", "whispers:edit", "user:read:broadcast", "user:read:email"]
+      }
     }
   },
   "mongodb": "MONGO_URI"
